@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&display=swap');
+
+*{
+    padding:0; 
+    margin:0;
+    border: none;
+    box-sizing:border-box;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-collapse: collapse;
+    text-decoration: none;
+}
+:root{
+    --colorBasic: rgb(37,219,247);  
+    --colorBasic07: rgba(37,219,247,0.7); 
+    --colorBasic3: rgba(37,219,247,0.3);
+    --colorOscuro:rgb(44,36,61);
+    --colorOscuroT:rgba(44,36,61,.4);
+    --colorOscuroT2:rgba(44,36,61,.9);
+    --colorGris: #777;
+}
+
+body{
+    background-color:var(--colorBasic);
+    background: linear-gradient(0deg, var(--colorOscuro) 0%,  var(--colorBasic) 49%, var(--colorOscuro) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c243d",endColorstr="#2e2640",GradientType=1);
+    font-family: 'Montserrat', sans-serif;
+    overflow:scroll;
+}
+
+main{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Coiny', cursive;
+    font-size:4rem;
+    text-align:center;
+    margin: 3rem 0;
+    color:white;
+    text-shadow: 2px 2px var(--colorOscuro);
+}
+
+#marcador{
+    background-color: rgba(255,255,255,1);
+    border: 1px solid var(--colorBasic);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: nowrap;
+    width:70%;
+    margin:0 0 2rem 0;
+}
+
+#marcador>article{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+}
+#marcador h2{
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-weight: 200;
+}
+
+img.coronaOculta{
+    display:none;
+}
+#marcador h3{
+    margin: 0.8rem 0 0 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-weight: 200;
+}
+.corona{
+    display: inline-block;
+    height:2rem!important;
+    fill:darkgoldenrod !important;
+    vertical-align: bottom;
+    margin-bottom: -0.2rem;
+}
+
+
+.ganadas{
+    padding:0.7rem 3.5rem;
+    height:4rem;
+    width:100%;
+    background-color: var(--colorOscuro);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size:2.6rem;
+    text-align: center;
+}
+#partida h2{
+    color: var(--colorGris);
+    font-weight:lighter;
+    font-size: 1rem;
+}
+#contadorPartidas{
+    color: var(--colorBasic07);
+    font-size: 4rem ;
+    line-height: 4rem;
+}
+
+#secJuego{
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.juego{ 
+    min-width:450px;
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-template-columns: 150px 150px 150px; 
+    grid-template-rows: 150px 150px 150px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "a1 b1 c1"
+      "a2 b2 c2"
+      "a3 b3 c3"; 
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 100%; 
+}
+
+
+#a1,#b1,#a2,#b2{
+    border-bottom: 5px solid var(--colorBasic07);
+    border-right: 5px solid var(--colorBasic07);
+}
+
+#c1,#c2{
+    border-bottom: 5px solid var(--colorBasic07);
+}
+#a3,#b3{
+    border-right:5px solid var(--colorBasic07);
+}
+
+#a1{
+    grid-area: a1;
+}
+
+#b1{
+    grid-area:b1;
+}
+
+#c1{
+    grid-area:c1;
+}
+
+
+#a2{
+    grid-area: a2;
+}
+
+#b2{
+    grid-area:b2;
+}
+
+#c2{
+    grid-area:c2;
+}
+
+#a3{
+    grid-area: a3;
+}
+
+#b3{
+    grid-area:b3;
+}
+
+#c3{
+    grid-area:c3;
+}
+
+.pastilla{
+    font-size:6rem;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    height:100%;
+    align-self: center;
+    color: rgb(136, 24, 24);
+}
+
+#a1 { grid-area: a1; }
+#b1 { grid-area: b1; }
+#c1 { grid-area: c1; }
+#a2 { grid-area: a2; }
+#b2 { grid-area: b2; }
+#c2 { grid-area: c2; }
+#a3 { grid-area: a3; }
+#b3 { grid-area: b3; }
+#c3 { grid-area: c3; }
+
+nav{
+    width:60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:2rem 0 4rem 0;
+}
+
+nav button{
+    width:40%;
+    padding:0.7rem 2.5rem;
+    border: 2px solid var(--colorOscuro);
+    background-color: rgba(255,255,255,.8);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--colorOscuro);
+}
+nav button:hover{
+
+    background-color: var(--colorBasic07);
+    border: 2px solid transparent;
+    color: white;
+}
+
+footer{
+    width:100%;
+    /* margin:6rem 0 0 0; */
+    padding:1.5rem 15vw 2rem 15vw;
+    background-color: var(--colorOscuro);
+    text-align: center;
+    color:white;
+    font-size:0.9rem;
+}
+
+/* Media Queries */
+@media screen and (max-width:475px)
+{
+    #marcador{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+        flex-wrap: wrap;
+    }
+
+    #marcador>article#player1,
+    #marcador>article#player2
+    {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+    }
+    #marcador>article#player1,
+    #marcador>article#player2
+    {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #marcador>article#player1 h2,
+    #marcador>article#player2 h2{
+        width:35%;
+        font-size:1.1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img.coronaOculta{
+        display:inline-block;
+        height:1.2rem!important;
+        fill:darkgoldenrod !important;
+        vertical-align: bottom;
+        margin-bottom: -0.2rem;
+    }
+
+    #marcador>article#player1 .ganadas,
+    #marcador>article#player2 .ganadas{
+        width:55%;
+    }
+
+    .ganadas{
+        padding:0.5rem 3.5rem;
+        height:3rem;
+        font-size:2rem;
+    }
+
+    #marcador>article h3{
+        display: none;
+    }
+
+    #marcador>article#partida{
+        width:100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    #partida h2{
+        width:45%;
+        text-align: center;
+    }
+
+    .juego{ 
+        min-width:90vw;
+        display: grid; 
+        grid-auto-flow: column; 
+        grid-template-columns: 30vw 30vw 30vw; 
+        grid-template-rows: 30vw 30vw 30vw; 
+    
+    }
+
+    nav{
+        width:90vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav button{
+        width:80%;
+        margin-top:1rem;
+    }
+
+
+}
